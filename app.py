@@ -77,7 +77,7 @@ def save_summary_to_pdf(summary_text, output_pdf="summary_output.pdf"):
 # 5. Streamlit UI
 # ---------------------------------------------------------
 st.set_page_config(page_title="PDF Summarizer", page_icon="📄", layout="wide")
-st.title("📘 PDF Summarizer using BART-large-CNN")
+st.title("📘 PDF Summarizer")
 
 uploaded_file = st.file_uploader("📤 Upload a PDF file", type=["pdf"])
 
@@ -131,3 +131,4 @@ if uploaded_file:
             st.write(f"**Precision:** {P.mean().item():.4f}")
             st.write(f"**Recall:** {R.mean().item():.4f}")
             st.write(f"**F1 Score:** {F1.mean().item():.4f}")
+
